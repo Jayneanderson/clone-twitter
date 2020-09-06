@@ -1,0 +1,9 @@
+Introdução ao Flexbox
+
+Conceitos
+
+O Flexbox é uma maneira de criar layouts resposíveis. 
+Ela foi inspirada na maneira como as apps são
+estilizados  com Android.
+
+Facilita na criação de diferentes tamanhos e formatos
