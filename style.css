@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que a conta do padding e margin sejam exatas. Exemplo:
+    se vc colocar uma altura de 300 e uma largura de 20, em tese, somaria 20 de cada lado da largura
+    aumentando para 340, mas essa propriedade faz uma soma interna para que não ultrapasse */
+
+}
+
+body {
+    background-color: #00ff00;
+    font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+    text-rendering: optimizeLegibility !important; /* deixa a fonte menos "pixalizada". A 2ª propriedade sobreescreve qualquer outra text-rendering*/
+    -webkit-font-smoothing: antialiased !important;
+}
+
+
+
+
+.item {
+    width: 100px;
+    height: 100px;
+}
