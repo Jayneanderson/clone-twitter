@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Clone-Twitter</title>
 </head>
 <body>
 
-    <header>
+    <header id="container">
         <!-- lista de 3 itens -->
         <!-- ícone no centro -->
         <!-- input de busca / avatar/ botão pesquisa -->
-
-        <div>
-            <input type="text" placeholder="Search on Twitter">
-            <img src="" alt="avatar twett">
+        <ul>
+            <li><img src="images/home.svg" class="icon-home"> Home</li>
+            <li><img src="images/notification.svg">Notifications</li>
+            <li><img src="images/email.svg">Messages</li>
+        </ul>
+        
+        <img class="icon-twitter"src="images/twitter.svg">
+    
+        <div class="header-left">
+            <input type="text" placeholder="Search on Twitter" >
+            <img src="images/avatar.svg" alt="avatar twett">
             <button name="Tweet">Tweet</button>
-        </div>    
+        </div>  
+          
     </header>
 
 </body>
