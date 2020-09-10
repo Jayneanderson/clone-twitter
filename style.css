@@ -6,7 +6,12 @@
     aumentando para 340, mas essa propriedade faz uma soma interna para que não ultrapasse */
 
 }
-
+:root{
+    --gelado: #E0E0E0;
+    --white: #ffffff;
+    --paleBlue: #00AAEC;
+    --cinza: #474d50;
+}
 body {
     font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
     text-rendering: optimizeLegibility !important; /* deixa a fonte menos "pixalizada". A 2ª propriedade sobreescreve qualquer outra text-rendering*/
@@ -14,57 +19,77 @@ body {
 }
 
 header {
-    background-color: #E0E0E0;
     height: 50px;
+    background-color: var(--white);
     
 }
-#container {
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto; /* coloca nossos elementos da página no centro. */
+}
+
+header#container {
+    position: relative; /* os dois últimos blocos chamam a shadown para p/ frente do header */
+    z-index: 1;
+}
+
+header#container .content{
     display: flex;
+    flex: 1;
+    
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 100%;
 }
+
 
 header#container ul {
     display: flex;
     list-style: none;
 }
 
-header#container div.header-left {
-    display: flex;
-    align-items: center;
-}
-
 header#container ul li {
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: 15px;
+    font-weight: bold;
+    color: var(--cinza);
+    cursor: pointer;
+    
+    margin-left: 10px
+}
+
+header#container div.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header#container div.header-left img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
 }
 
 header#container li img{
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    margin-right: 3px;
 }
 
-header#container li .icon-home {
-    height: 18px;
-    margin-bottom: 3px;
-}
 
-header#container div.header-left img{
+/* header#container div img{
     width: 40px;
     height: 40px;
-    margin: 0 10px 0 10px;
-}
+    margin: 0 10px;
+} */
 
 header .icon-twitter {
-    width: 30px;
-    height: 30px;
-}
-
-header#container li {
-    margin-left: 10px;
+    width: 20px;
+    height: 20px;
 }
 
 header#container li:first-child {
@@ -72,12 +97,11 @@ header#container li:first-child {
 }
 
 header#container button {
-    background-color: #00AAEC;
+    background-color: var(--paleBlue);
     width: 90px;
-    height: 40px;
-    margin-right: 10px;
-    border: 1px solid #00AAEC;
-    color: #ffff;
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
 }
 
 header#container input {
@@ -85,13 +109,57 @@ header#container input {
     background: url('images/search.svg') no-repeat 155px center;
     background-size: 20px;
     padding-right: 30px;
-     background-position-x: 180px;
+    background-position-x: 180px;
+    border: 1px solid var(--gelado);
 }
 
 input, button {
    height: 40px;
    border-radius: 20px;
    outline: none; 
-   border: 1px solid #ffff;  
+   border: 1px solid var(--white);  
 
+}
+
+header {
+    box-shadow: 0 1px 3px var(--cinza);
+}
+
+section.main-banner{
+    width: 100%;
+    height: 400px;
+    background-color: var(--paleBlue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section p {
+    margin-top: 30px;    
+}
+
+div.info ul {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    box-shadow: 0 1px 3px var(--cinza);
+}
+
+div.info li {
+    margin-left: 50px;
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+div.info li p{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--cinza);
+    font-size: 20px;
 }
