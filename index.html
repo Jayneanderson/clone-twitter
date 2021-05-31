@@ -1,69 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <title>Clone-Twitter</title>
+    <title>Clone-Twitter</title>  <!-- ☰ --> 
 </head>
+
 <body>
 
     <header id="container">
-        <!-- lista de 3 itens -->
-        <!-- ícone no centro -->
-        <!-- input de busca / avatar/ botão pesquisa -->
-       <div class="content">
-            <ul>
-                <li><img src="images/home.svg" class="icon-home"> Home</li>
-                <li><img src="images/notification.svg">Notifications</li>
-                <li><img src="images/email.svg">Messages</li>
-            </ul>
-            
-            <img class="icon-twitter"src="images/twitter.svg">
-        
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><img src="images/home.svg" class="icon-home">Início</li>
+                    <li><img src="images/notification.svg">Notifications</li>
+                    <li><img src="images/message.svg">Messages</li>
+                    <li><img src="images/moments.svg" alt="">Momentos</li>
+                </ul>
+            </nav>
+            <img class="icon-twitter" src="images/twitter.svg">
             <div class="header-left">
-            <!-- <div class="header-left"> -->
-                <input type="text" placeholder="Search on Twitter" >
-                <img src="images/avatar.svg" alt="avatar twett" >
+                <!-- <div class="header-left"> -->
+                <input type="text" placeholder="Search on Twitter">
+                <img src="images/avatar.svg" alt="avatar twett">
                 <button name="Tweet">Tweet</button>
-            </div> 
-        </div>  
+            </div>
+        </div>
     </header>
 
-    <section class="main-banner">
-        <h3>Today, I'm here</h3>
-        <p>but even so, the farmer's wife</p>
-    </section>
+    <div class="main-banner">
+        <h3>Replicando a tela inicla antiga do Twitter</h3>
+        <p>Praticando front-end</p>
+    </div>
 
-  <!--   <div class="info" class="content"> 
-       <ul>
-           <li>Tweets
-               <p>300</p>
-           </li>
+    <div class="barra-info">
+        <div class="content">
+            <ul>
+                <li id="ativo">
+                    <span>Tweets</span>
+                    <strong>3931</strong>
+                </li>
+                <li>
+                    <span>Seguindo</span>
+                    <strong>654</strong>
+                </li>
+                <li>
+                    <span>Seguidores</span>
+                    <strong>387</strong>
+                </li>
+                <li>
+                    <span>Favoritos</span>
+                    <strong>265</strong>
+                </li>
+                <li>
+                    <span>Listas</span>
+                    <strong>8</strong>
+                </li>
+                <li>
+                    <span>Momentos</span>
+                    <strong>0</strong>
+                </li>
+            </ul>
 
-           <li>Fallowings
-               <p>300</p>
-           </li>
+            <div id="follow-info">
+                <button>Seguir</button>
+                <img src="images/twitte_3_points.svg" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper content">
+        <aside class="profile">
+            <img src="images/avatar.svg" alt="" id="avatar">
+            <h1>Ninja Show</h1>
+            <span>@Jay</span>
+            <p>Desenvolvedor Web, Rock Music e o solucionador dos seus problemas</p>
+            <ul>
+                <li><img src="images/place.svg" alt="cidade atual">Cachoeira, Bahia</li>
+                <li><img src="images/link.svg" alt="url do seu perfil" id="url"><a>ninjashow.be</a></li>
+                <li><img src="images/time.svg" alt="data de ingresso">Ingressou em 2010</li>
+                <li><img src="images/child.svg" alt="data de nascimento">Nasceu em 1997</li>
+            </ul>
 
-           <li>Fallowers
-               <p>300</p>
-           </li>
-           
-           <li>Favorites
-               <p>300</p>
-            </li>
-           
-           <li>Lists
-                <p>300</p>
-           </li>
-           
-           <li>Moments
-               <p>300</p>
-           </li>
+            <div class="components followers">
+                <strong><img src="images/seguidores.svg" alt="seguidores">100 seguidores</strong>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
 
-          
-       </ul> -->
+            <div class="components images">
+                <strong><img src="images/galeria.svg" alt="images e vídeos">6 Imagens e vídeos</strong>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+        </aside>
+
+        <section class="timeline">
+            <ul>
+                <li><strong>Tweets</strong></li>
+                <li><strong>Tweets e respostas</strong></li>
+                <li><strong>Mídia</strong></li>
+            </ul>
+        </section>
+
+        <aside class="widgets">
+                <h4>Quem te seguiu</h4>
+        </aside>
     </div>
 </body>
+
 </html>

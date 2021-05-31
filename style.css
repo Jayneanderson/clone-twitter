@@ -7,16 +7,30 @@
 
 }
 :root{
-    --gelado: #E0E0E0;
+    --gelado: #e6ecf0;
     --white: #ffffff;
     --paleBlue: #00AAEC;
-    --cinza: #474d50;
+    --cinza: #667580;
+    --pretoFraco: #212121;
 }
 body {
     font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
     text-rendering: optimizeLegibility !important; /* deixa a fonte menos "pixalizada". A 2ª propriedade sobreescreve qualquer outra text-rendering*/
     -webkit-font-smoothing: antialiased !important;
+    background-color: var(--gelado);
 }
+
+/* body::-webkit-scrollbar {/* define a largura do scroll 
+    width: 0.50rem;
+}
+
+body::-webkit-scrollbar-track{/* regra para a cor do scroll completo 
+    background-color: var(--white);
+}
+
+body::-webkit-scrollbar-thumb{/* regra para o scroll rolando 
+    background-color: var(--paleBlue);
+} */
 
 header {
     height: 50px;
@@ -31,9 +45,11 @@ header {
 header#container {
     position: relative; /* os dois últimos blocos chamam a shadown para p/ frente do header */
     z-index: 1;
+    width: 100%;
 }
 
 header#container .content{
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,10 +70,21 @@ header#container ul li {
     font-weight: bold;
     color: var(--cinza);
     cursor: pointer;
-    margin-left: 10px
+    margin-left: 22px;
+}
+
+header#container li:first-child {
+    margin-left: 0;
+}
+
+header#container li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
 }
 
 header#container div.header-left {
+    max-width: 100%;
     display: flex;
     align-items: center;
 }
@@ -65,7 +92,8 @@ header#container div.header-left {
 header#container div.header-left img {
     width: 40px;
     height: 40px;
-    margin: 0 10px;
+    margin: 0 18px;
+    color:rgba(0, 0, 0, 0.25);
 }
 
 /* header#container div img{
@@ -82,7 +110,7 @@ header .icon-twitter {
 
 header#container button {
     background-color: var(--paleBlue);
-    width: 90px;
+    width: 100px;
     color: var(--white);
     font-weight: bold;
     cursor: pointer;
@@ -96,6 +124,9 @@ header#container input {
     background-position-x: 180px;
     border: 1px solid var(--gelado);
 }
+header {
+    box-shadow: 0 1px 3px var(--cinza);
+}
 
 input, button {
    height: 40px;
@@ -104,11 +135,7 @@ input, button {
    border: 1px solid var(--white);  
 }
 
-header {
-    box-shadow: 0 1px 3px var(--cinza);
-}
-
-section.main-banner{
+div.main-banner{
     width: 100%;
     height: 400px;
     background-color: var(--paleBlue);
@@ -117,32 +144,244 @@ section.main-banner{
     align-items: center;
     justify-content: center;
 }
-
-section p {
+div.main-banner h3, div.main-banner p{
+    color: var(--white);
+}
+div.main-banner p {
     margin-top: 30px;    
 }
 
-div.info ul {
+div.barra-info {
     width: 100%;
     height: 60px;
+    background-color: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.barra-info .content {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    list-style: none;
-    box-shadow: 0 1px 3px var(--cinza);
+    padding-left: 20%;
 }
 
-div.info li {
-    margin-left: 50px;
+div.barra-info ul {
+    max-width: 100%;
+    height  : 100%;
+    list-style-type: none;
+    display: flex;
+}
+
+div.barra-info ul li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+div.barra-info ul li#ativo::after{
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--paleBlue);
+}
+
+div.barra-info ul li#ativo strong{
+    color: var(--paleBlue);
+    
+}
+
+div.barra-info ul li span {
+    font-size: max(13px,1vw);
     font-weight: bold;
     color: var(--cinza);
 }
 
-div.info li p{
+div.barra-info ul li strong {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: var(--cinza);
+}
+
+div.barra-info #follow-info {
+    width: 100%;
     display: flex;
     justify-content: center;
+}
+
+div.barra-info #follow-info button {
+    width: 100px;
+    background-color: var(--white);
+    color: var(--paleBlue);
+    font-size: 13px;
     font-weight: bold;
+    border: 1px solid var(--paleBlue);
+    cursor: pointer;
+    margin-right: 18px;
+}
+
+/* estilizando o profile */
+div.wrapper {
+    display: flex;
+    margin-top: 10px;
+}
+
+div.wrapper aside {
+    width: 23.63%;
+}
+
+div.wrapper aside img#avatar {
+    width: 200px;
+    height: 200px;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    margin-top: -150px;
+}
+div.wrapper aside.profile {
+    width:
+}
+
+div.wrapper aside.profile h1 {
+    padding: 5px 0px;
+    color: var(--pretoFraco);
+}
+
+div.wrapper aside.profile span, div.wrapper aside.profile li {
     color: var(--cinza);
-    font-size: 20px;
+}
+
+div.wrapper aside.profile p {
+    padding: 15px 0px;
+}
+div.wrapper aside.profile ul {
+    list-style-type: none;
+}
+
+div.wrapper aside.profile ul li {
+    display: flex;
+    padding: 3px 0px;
+    
+}
+
+div.wrapper aside.profile ul li a {
+    color: var(--paleBlue);
+    cursor: pointer;
+}
+div.wrapper aside.profile ul li img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+
+div.wrapper aside.profile div.components {
+    width: 100%;
+    margin-top: 15px;
+}
+
+div.wrapper aside.profile .components strong {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: var(--paleBlue);
+    cursor: pointer;
+}
+div.wrapper aside.profile .components img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+div.wrapper .followers ul {
+    display: flex;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+div.wrapper aside.profile div.followers ul li {
+    width: 40px;
+    height: 40px;
+    margin: 3px 5px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #d0d5d9;
+}
+
+div.wrapper aside.profile div.images ul {
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.wrapper aside.profile div.images ul li {
+    width: 31.91192309%;
+    height: 80px;
+    margin: 2px 1px;
+    flex-shrink: 0;
+    border-radius: 8%;
+    background-color: #d0d5d9;
+}
+/* estilizando a timeline */
+
+
+div.wrapper section.timeline{
+    width: 580px;
+    display: flex;
+    padding: 15px 0px;
+    margin-left: 18px;
+    background-color: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    border: 2px solid var(--white);
+} 
+
+div.wrapper section.timeline:hover {
+    border: 2px solid var(--paleBlue);
+}
+
+div.wrapper section.timeline ul {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    list-style-type: none;
+    border-bottom: 1px solid rgba(102, 117, 128, 0.1);
+}
+
+div.wrapper section.timeline ul li {
+    padding: 0px 10px;
+    color: var(--paleBlue);
+    cursor: pointer;
+}
+
+
+div.wrapper section.timeline ul li:first-child {
+    color: var(--pretoFraco);
+}
+div.wrapper section.timeline ul li strong {
+    font-size: 16px;
+    font-weight: bold;
+}
+/* estilizando o widget*/
+
+div.wrapper aside.widgets {
+    height: 300px;
+    padding: 15px 10px;
+    margin: 0px 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+    background-color: var(--white);
+    border: 2px solid var(--white);
+}
+
+div.wrapper aside.widgets:hover {
+    border: 2px solid var(--paleBlue);
+}
+
+div.wrapper aside.widgets .seguidores {
+    padding: 0px 10px ; 
 }
