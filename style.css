@@ -46,6 +46,7 @@ header#container {
     position: relative; /* os dois últimos blocos chamam a shadown para p/ frente do header */
     z-index: 1;
     width: 100%;
+    padding: 0px 20px;
 }
 
 header#container .content{
@@ -62,7 +63,7 @@ header#container ul {
     list-style: none;
 }
 
-header#container ul li {
+.header-list-element {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +165,8 @@ div.barra-info .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20%;
+    padding-left: 270px;
+    /* padding-left: 20%; */
 }
 
 div.barra-info ul {

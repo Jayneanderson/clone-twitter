@@ -1,18 +1,44 @@
 /* Ao ficar menor, os ícones ficam fixados na parte inferior da tela */
-@media only screen and (max-width: 880px) {
-    #container {
-        display: none;
-    }
+@media only screen and (max-width: 920px) {
 
     header#container {
-        position: absolute;
+        width: 250px;
+        height: auto;
+        position: fixed;
         top: 0;
         left: 0;
-        display: flex;
+        
+    }
+    
+    header#container .content {
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 100%;
+    }
+    
+    div.barra-info .content {
+        padding-left: 219px;
+        /* padding-left: 20%; */
+    }
+
+    .header-nav {
+        width: 100%;
+    }
+
+    .header-list {
         flex-direction: column;
     }
 
-    .content {
+    .header-list-element {
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0px;
+        padding: 10px 0px;
+        border: 1px solid red;
         
+    }
+    
+    .header-left {
+        flex-direction: column;
     }
 }
