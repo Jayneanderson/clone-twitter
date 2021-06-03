@@ -31,6 +31,9 @@ body::-webkit-scrollbar-track{/* regra para a cor do scroll completo
 body::-webkit-scrollbar-thumb{/* regra para o scroll rolando 
     background-color: var(--paleBlue);
 } */
+.selected  {
+    color: red;
+}
 
 header {
     height: 50px;
@@ -69,13 +72,22 @@ header#container ul {
     justify-content: center;
     font-size: 15px;
     font-weight: bold;
-    color: var(--cinza);
     cursor: pointer;
     margin-left: 22px;
 }
 
 header#container li:first-child {
     margin-left: 0;
+}
+.header-list-element.profile {
+    display: none;
+}
+
+.header-list-element-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cinza);
 }
 
 header#container li img{
@@ -102,6 +114,10 @@ header#container div.header-left img {
     height: 40px;
     margin: 0 10px;
 } */
+
+#icon-twitter-first {
+    display: none;
+}
 
 header .icon-twitter {
     width: 20px;
@@ -145,7 +161,7 @@ div.main-banner{
     align-items: center;
     justify-content: center;
 }
-div.main-banner h3, div.main-banner p{
+div.main-banner h3, div.main-banner p {
     color: var(--white);
 }
 div.main-banner p {

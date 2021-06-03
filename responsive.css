@@ -7,7 +7,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        
+        overflow: auto;
+        padding-top: 20px;
     }
     
     header#container .content {
@@ -34,11 +35,23 @@
         justify-content: flex-start;
         margin-left: 0px;
         padding: 10px 0px;
-        border: 1px solid red;
         
+    }
+
+    .header-list-element.profile {
+        display: flex;
     }
     
     .header-left {
         flex-direction: column;
     }
+
+    #icon-twitter-first {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .icon-twitter {
+        display: none;
+    }
+
 }
